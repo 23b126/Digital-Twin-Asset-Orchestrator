@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#E4E3E0] text-[#141414] antialiased;
+  }
+
+  /* Technical Grid Background */
+  .tech-grid {
+    background-image: radial-gradient(#141414 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+  }
+}
+
+@layer components {
+  .data-row {
+    @apply border-b border-[#141414] transition-all duration-200 cursor-pointer;
+  }
+
+  .data-row:hover {
+    @apply bg-[#141414] text-white;
+  }
+
+  .status-pill {
+    @apply px-3 py-1 rounded-full text-[10px] font-bold border uppercase tracking-widest;
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+

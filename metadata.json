@@ -1,0 +1,5 @@
+{
+  "name": "Digital Twin Asset Orchestrator",
+  "description": "A state-driven resource orchestration framework for managing infrastructure assets through digital twin technology, including lifecycle management, leasing, and real-time monitoring.",
+  "requestFramePermissions": []
+}
